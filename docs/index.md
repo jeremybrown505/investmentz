@@ -10,12 +10,14 @@ strategies.
 
 New traders who want to use play money and develop some strategies using real market conditions,
 and analyze their decisions before rising their real life assets.
+
 “As a new trader I really want a platform that uses live, real market data to allow me to set up
 fake trades and test my strategy. I would like some tools that allow me to see a history of
 the market, and a some data that helps me analyze whether my strategies are working.”
 
 Day traders who want to create and tweak new strategies, and be able to use real world funds to
 execute trades and have access to some tools to help them analyze the results.
+
 “As a day trader I wonder how effective the trades I have initiated have been. I would like to see
 a history of the trades I have made, the price I purchased the comodity for, how much it sold for, 
 the date and time this transaction occured, and the profit margins of that particular trade, shown 
