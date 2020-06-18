@@ -26,4 +26,4 @@ create, test, and evaluate new strategies, in a real or simulated environment.â€
 ## Design documentation
 
 * [Wireframe diagram](wireframe.md)
-* [Entity relationships](entityRelationships.md)
+* [Entity relationships](entity-relationships.md)
