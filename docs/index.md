@@ -1,5 +1,3 @@
-#Investmentz
-
 ## Introduction
 Investmentz is an android based platform that will allow its users to setup an account,
 chose to use fake money or real money and start trading using live market data. Investmentz
