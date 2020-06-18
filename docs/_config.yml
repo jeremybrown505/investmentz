@@ -1,2 +1,5 @@
 theme: jekyll-theme-slate
-Title: Investmentz
+title: Investmentz
+show_downloads: true
+titles_from_headings:
+  enabled: true
