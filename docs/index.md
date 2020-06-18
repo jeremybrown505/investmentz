@@ -6,16 +6,18 @@ their real life assets, setting up buy and sell orders from the app, keep a hist
 and some basic profit analysis to help a trader monitor and analyze the effectiveness of their 
 strategies.
 
-** The ability to set up a username and password
+<ul>
+<li> The ability to set up a username and password</li>
 
-** Access live market data.
+<li> Access live market data.</li>
 
-** Storing a history of data. What was purchased, when, for what price, and what it sold for, 
-as well as the profit/loss in raw dollar amounts and percentage of initial investment.
+<li> Storing a history of data. What was purchased, when, for what price, and what it sold for, 
+as well as the profit/loss in raw dollar amounts and percentage of initial investment.</li>
 
-** The program will create a simulated environment using fake money and live market data allow the
-user to practice their trading skills while recording and analyzing the results.
-    
+<li> The program will create a simulated environment using fake money and live market data allow the
+user to practice their trading skills while recording and analyzing the results.</li>
+</ul>    
+
 ## User Stories
 
 “As a new trader I really want a platform that uses live, real market data to allow me to set up
