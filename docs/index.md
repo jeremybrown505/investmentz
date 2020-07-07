@@ -6,39 +6,44 @@ their real life assets, setting up buy and sell orders from the app, keep a hist
 and some basic profit analysis to help a trader monitor and analyze the effectiveness of their 
 strategies.
 
-<ul>
-<li> The ability to set up a username and password</li>
+* The ability to set up a username and password
 
-<li> Access live market data.</li>
+* Access live market data.
 
-<li> Storing a history of data. What was purchased, when, for what price, and what it sold for, 
-as well as the profit/loss in raw dollar amounts and percentage of initial investment.</li>
+* Storing a history of data. What was purchased, when, for what price, and what it sold for, 
+as well as the profit/loss in raw dollar amounts and percentage of initial investment.
 
-<li> The program will create a simulated environment using fake money and live market data allow the
-user to practice their crypto trading skills while recording and analyzing the results.</li>
-</ul>    
+* The program will create a simulated environment using fake money and live market data allow the
+user to practice their crypto trading skills while recording and analyzing the results.
+    
 
 ## User Stories
 
 New traders who want to use play money and develop some strategies using real market conditions,
  and analyze their decisions before rising their real life assets.
  
-“As a new trader I really want a platform that uses live, real market data to allow me to set up
-fake trades and test my strategy. I would like some tools that allow me to see a history of
-what im doing, and a some data that helps me analyze whether my strategies are working.”
+> “As a new trader I really want a platform that uses live, real market data to allow me to set up
+fake trades and test my strategy."
 
 Day traders who want to create and tweak new strategies, and be able to use real fake funds to
 execute trades and have access to some tools to help them analyze the results before risking actual
 assets.
 
-“I cant be the only day trader who wonders how effective the trades I have initiated have been. I 
-would like to see a history of the trades I have made, the price I purchased the commodity for, 
-how much it sold for, the date and time this transaction occurred, and the profit margins of that
-particular trade, shown both in dollars, and a percentage of the total investment. With these tools
-I wish to create, test, and evaluate new strategies, in a real or simulated environment.”
+    > “As a day trader I wonder how effective the trades I have made have been, with this software 
+    I can evaluate my preformance to maximize my profits."
 
 
 ## Design documentation
 
 * [Wireframe diagram](wireframe.md)
 * [Entity relationships](entity-relationships.md)
+
+## External services
+
+I plan on implementing Coinbase's Api, and using it to extract the current
+market price of Bitcoin as measured in USD and display that to the user. 
+
+* I will be accessing the coinbase api located here.
+https://docs.pro.coinbase.com/#introduction
+
+

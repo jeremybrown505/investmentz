@@ -21,8 +21,8 @@ public class Currency {
     @ColumnInfo(index = true)
     private Date timestamp;
 
-//    @ColumnInfo(name = "usd_price")
-//    private BigDecimal usdPrice;
+    @ColumnInfo(name = "usd_price")
+    private BigDecimal usdPrice;
 
     public long getCurrencyId() {
         return currencyId;
@@ -48,12 +48,12 @@ public class Currency {
         this.timestamp = timestamp;
     }
 
-//    public BigDecimal getUsdPrice() {
-//        return usdPrice;
-//    }
-//
-//    public void setUsdPrice(BigDecimal usdPrice) {
-//        this.usdPrice = usdPrice;
-//    }
-    //todo check comments
+    public BigDecimal getUsdPrice() {
+        return usdPrice;
+    }
+
+    public void setUsdPrice(BigDecimal usdPrice) {
+        this.usdPrice = usdPrice;
+    }
+
 }
