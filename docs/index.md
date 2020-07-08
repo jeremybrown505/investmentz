@@ -29,8 +29,8 @@ Day traders who want to create and tweak new strategies, and be able to use real
 execute trades and have access to some tools to help them analyze the results before risking actual
 assets.
 
-    > “As a day trader I wonder how effective the trades I have made have been, with this software 
-    I can evaluate my preformance to maximize my profits."
+> “As a day trader I wonder how effective the trades I have made have been, with this software 
+I can evaluate my preformance to maximize my profits."
 
 
 ## Design documentation
