@@ -1,6 +1,7 @@
 package edu.cnm.deepdive.investmentz.model.dao;
 
 import androidx.lifecycle.LiveData;
+import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
@@ -11,6 +12,7 @@ import edu.cnm.deepdive.investmentz.model.entity.Transaction;
 import io.reactivex.Single;
 import java.util.List;
 
+@Dao
 public interface TransactionDao {
 
   @Insert(onConflict = OnConflictStrategy.IGNORE)

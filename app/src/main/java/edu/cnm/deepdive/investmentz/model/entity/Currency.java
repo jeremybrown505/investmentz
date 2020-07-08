@@ -4,7 +4,6 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
-import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity(indices = @Index(value = "crypto_symbol", unique = true))
@@ -22,7 +21,7 @@ public class Currency {
     private Date timestamp;
 
     @ColumnInfo(name = "usd_price")
-    private BigDecimal usdPrice;
+    private Long usdPrice;
 
     public long getCurrencyId() {
         return currencyId;
@@ -48,11 +47,11 @@ public class Currency {
         this.timestamp = timestamp;
     }
 
-    public BigDecimal getUsdPrice() {
+    public Long getUsdPrice() {
         return usdPrice;
     }
 
-    public void setUsdPrice(BigDecimal usdPrice) {
+    public void setUsdPrice(Long usdPrice) {
         this.usdPrice = usdPrice;
     }
 

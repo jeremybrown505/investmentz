@@ -40,10 +40,13 @@ assets.
 
 ## External services
 
-I plan on implementing Coinbase's Api, and using it to extract the current
-market price of Bitcoin as measured in USD and display that to the user. 
+### Coinbase
 
-* I will be accessing the coinbase api located here.
-https://docs.pro.coinbase.com/#introduction
+* I plan on integrating with Coinbase's API, and using it to extract the current
+market price of crypto-currencies as measured in USD and display that to the user, records it in
+a database, and runs some primitive profit calculations on them.
 
+* If my app loses connection to the internet and the API, the app will lock any transactions and
+prevent further trades until reconnected to the network.  
 
+* The Coinbase API is documented at <https://docs.pro.coinbase.com/#introduction>.

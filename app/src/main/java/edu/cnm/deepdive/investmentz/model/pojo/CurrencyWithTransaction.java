@@ -17,4 +17,4 @@ public class CurrencyWithTransaction extends Currency {
 }
 //
 //
-//todo check into pojos
+// TODO check into pojos

@@ -5,7 +5,6 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
-import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity(
@@ -32,19 +31,27 @@ public class Transaction {
 
   @ColumnInfo(name = "sell_currency_id", index = true)
   private Long sellCurrencyId;
-  //ask about nullable value on fks
+
   @ColumnInfo(name = "buy_currency_id", index = true)
   private long buyCurrencyId;
 
+  @NonNull
   @ColumnInfo(index = true)
-  private Date timestamp;
-// TODO update erd to add index to timestamp.
+  private Date timestamp = new Date();
 
   @ColumnInfo(name = "buy_price")
-  private BigDecimal buyPrice;
+  private long buyPrice;
 
   @ColumnInfo(name = "quantity_purchased")
-  private BigDecimal quantityPurchased;
+  private long quantityPurchased;
+
+  @ColumnInfo(name = "sold_price")
+  private long soldPrice;
+
+  @ColumnInfo(name = "quantity_sold")
+  private long quantitySold;
+  // TODO add pdf to erd- draw.io having error, wont let me export at this time.
+
 
   public long getTransactionId() {
     return transactionId;
@@ -54,43 +61,60 @@ public class Transaction {
     this.transactionId = transactionId;
   }
 
-  public Long getSellCurrency() {
+  public Long getSellCurrencyId() {
     return sellCurrencyId;
   }
 
-  public void setSellCurrency(Long sellCurrency) {
-    this.sellCurrencyId = sellCurrency;
+  public void setSellCurrencyId(Long sellCurrencyId) {
+    this.sellCurrencyId = sellCurrencyId;
   }
 
-  public long getBuyCurrency() {
+  public long getBuyCurrencyId() {
     return buyCurrencyId;
   }
 
-  public void setBuyCurrency(long buyCurrency) {
-    this.buyCurrencyId = buyCurrency;
+  public void setBuyCurrencyId(long buyCurrencyId) {
+    this.buyCurrencyId = buyCurrencyId;
   }
 
+  @NonNull
   public Date getTimestamp() {
     return timestamp;
   }
 
-  public void setTimestamp(Date timestamp) {
+  public void setTimestamp(@NonNull Date timestamp) {
     this.timestamp = timestamp;
   }
 
-  public BigDecimal getBuyPrice() {
+  public long getBuyPrice() {
     return buyPrice;
   }
 
-  public void setBuyPrice(BigDecimal buyPrice) {
+  public void setBuyPrice(long buyPrice) {
     this.buyPrice = buyPrice;
   }
 
-  public BigDecimal getQuantityPurchased() {
+  public long getQuantityPurchased() {
     return quantityPurchased;
   }
 
-  public void setQuantityPurchased(BigDecimal quantityPurchased) {
+  public void setQuantityPurchased(long quantityPurchased) {
     this.quantityPurchased = quantityPurchased;
+  }
+
+  public long getSoldPrice() {
+    return soldPrice;
+  }
+
+  public void setSoldPrice(long soldPrice) {
+    this.soldPrice = soldPrice;
+  }
+
+  public long getQuantitySold() {
+    return quantitySold;
+  }
+
+  public void setQuantitySold(long quantitySold) {
+    this.quantitySold = quantitySold;
   }
 }
