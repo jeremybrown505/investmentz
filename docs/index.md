@@ -37,7 +37,7 @@ I can evaluate my preformance to maximize my profits."
 
 * [Wireframe diagram](wireframe.md)
 * [Entity relationships](entity-relationships.md)
-* [Entity classes](https://github.com/jeremybrown505/investmentz/tree/master/app/src/main/java/edu/cnm/deepdive/investmentz/model/entity)
+* [Entity classes](entity-classes.md)
 
 ## External services
 
