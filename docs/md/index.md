@@ -37,6 +37,7 @@ assets.
 
 * [Wireframe diagram](wireframe.md)
 * [Entity relationships](entity-relationships.md)
+* [Entity Classes](entity-classes.md)
 
 ## External services
 
