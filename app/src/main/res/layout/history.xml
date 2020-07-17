@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <TextView
+    android:id="@+id/USD"
+    android:text="USD("
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/scroll_values"
+    />
+
+  <TextView
+    android:id="@+id/scroll_values"
+    android:text="Bitcoin held... Current Value... Optimal Value..."
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toEndOf="@id/USD"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    />
+
+  <TextView
+    android:id="@+id/date_purchased"
+    android:text="Date Purchased:"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/USD"
+    app:layout_constraintEnd_toStartOf="@id/amount_purchased"
+    app:layout_constraintBottom_toTopOf="@id/recycler_view"
+    />
+
+
+  <TextView
+    android:id="@+id/amount_purchased"
+    android:text="Amount Purchased:"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toEndOf="@id/date_purchased"
+    app:layout_constraintTop_toBottomOf="@id/USD"
+    app:layout_constraintEnd_toStartOf="@id/buy_price"
+    app:layout_constraintBottom_toTopOf="@id/recycler_view"
+    />
+
+  <TextView
+    android:id="@+id/buy_price"
+    android:text="Buy Price:"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toEndOf="@id/amount_purchased"
+    app:layout_constraintTop_toBottomOf="@id/scroll_values"
+    app:layout_constraintEnd_toStartOf="@id/date_sold"
+    app:layout_constraintBottom_toTopOf="@id/recycler_view"
+    />
+
+  <TextView
+    android:id="@+id/date_sold"
+    android:text="Date Sold:"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toEndOf="@id/buy_price"
+    app:layout_constraintTop_toBottomOf="@id/scroll_values"
+    app:layout_constraintEnd_toStartOf="@id/sell_price"
+    app:layout_constraintBottom_toTopOf="@id/recycler_view"
+    />
+
+  <TextView
+    android:id="@+id/sell_price"
+    android:text="Sell Price:"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toEndOf="@id/date_sold"
+    app:layout_constraintTop_toBottomOf="@id/scroll_values"
+    app:layout_constraintEnd_toStartOf="@id/sold_price"
+    app:layout_constraintBottom_toTopOf="@id/recycler_view"
+    />
+
+  <TextView
+    android:id="@+id/sold_price"
+    android:text="Sold Price:"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toEndOf="@id/sell_price"
+    app:layout_constraintTop_toBottomOf="@id/scroll_values"
+    app:layout_constraintEnd_toStartOf="@id/ROI"
+    app:layout_constraintBottom_toTopOf="@id/recycler_view"
+    />
+
+  <TextView
+    android:id="@+id/ROI"
+    android:text="ROI"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toEndOf="@id/sold_price"
+    app:layout_constraintTop_toBottomOf="@id/scroll_values"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/recycler_view"
+    />
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recycler_view"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_margin="2dp"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    android:orientation="vertical"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/scroll_values"
+    app:layout_constraintEnd_toEndOf="parent"
+    />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

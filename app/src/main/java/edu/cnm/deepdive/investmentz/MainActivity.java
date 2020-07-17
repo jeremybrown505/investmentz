@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.investmentz.controller;
+package edu.cnm.deepdive.investmentz;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

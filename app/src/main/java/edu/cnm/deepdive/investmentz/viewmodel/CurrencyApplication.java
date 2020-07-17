@@ -16,7 +16,7 @@ public class CurrencyApplication extends Application {
         .subscribeOn(Schedulers.io())
         .subscribe();
     Stetho.initializeWithDefaults(this);
-
   }
+
 
 }

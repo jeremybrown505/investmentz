@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">Investmentz</string>
+  <string name="balance_button_text">Currently you have a total of $$$$$ funds available to trade.</string>
 </resources>
