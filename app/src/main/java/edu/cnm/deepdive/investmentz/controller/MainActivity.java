@@ -1,7 +1,7 @@
-package edu.cnm.deepdive.investmentz;
+package edu.cnm.deepdive.investmentz.controller;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
 import edu.cnm.deepdive.investmentz.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,3 +12,11 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
   }
 }
+
+//  @Override
+//  public void onFragmentInteraction(Uri uri) {
+//
+//  }
+//}
+
+
