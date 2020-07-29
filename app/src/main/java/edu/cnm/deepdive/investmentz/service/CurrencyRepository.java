@@ -4,7 +4,7 @@ import android.content.Context;
 import androidx.lifecycle.LiveData;
 import edu.cnm.deepdive.investmentz.model.dao.CurrencyDao;
 import edu.cnm.deepdive.investmentz.model.entity.Currency;
-import edu.cnm.deepdive.investmentz.model.pojo.CurrencyWithTransaction;
+import edu.cnm.deepdive.investmentz.service.CoinbaseService.InstanceHolder;
 import io.reactivex.Completable;
 import io.reactivex.Single;
 import io.reactivex.schedulers.Schedulers;
@@ -30,8 +30,14 @@ public class CurrencyRepository {
     return currencyDao.selectAll();
   }
 
-  public LiveData<List<Currency>> get(long id) {
-    return currencyDao.selectByCurrencyId(id);
+  public Single<List<Currency>> getAllForBackground() {
+    return currencyDao.selectAllForBackground()
+        .subscribeOn(Schedulers.io());
+  }
+
+  public Single<Currency> get(long id) {
+    return currencyDao.selectByCurrencyId(id)
+        .subscribeOn(Schedulers.io());
   }
 
   public Completable save(Currency currency) {
@@ -45,6 +51,7 @@ public class CurrencyRepository {
     }
   }
 
+
   public Completable delete(Currency currency) {
     if (currency.getCurrencyId() == 0) {
       return Completable.fromAction(() -> {})
@@ -54,7 +61,6 @@ public class CurrencyRepository {
           .subscribeOn(Schedulers.io());
     }
   }
-
 
 
 

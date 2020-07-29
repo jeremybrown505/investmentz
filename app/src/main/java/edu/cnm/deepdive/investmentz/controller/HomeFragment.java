@@ -1,15 +1,19 @@
 package edu.cnm.deepdive.investmentz.controller;
 
-import android.net.Uri;
+import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
-import android.view.LayoutInflater;
 import androidx.navigation.Navigation;
 import edu.cnm.deepdive.investmentz.R;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -40,34 +44,35 @@ public class HomeFragment extends Fragment {
     buy.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View view) {
-        // TODO buy button should check the transaction_amount field and buy that amount of currency, then clear the transaction amount field and toast a message confirming the transaction.
+        // TODO button should check the Transaction_amount field and buy that amount of currency, then clear the transaction_amount field, and toast a message confirming the transaction.
       }
     });
 
     sell.setOnClickListener(new OnClickListener() {
       @Override
-      public void onClick(View v) {
+      public void onClick(View view) {
         // TODO button should check the transaction_amount field and sell that amount of currency, then clear the transaction amount field and toast a message confirming the transaction.
       }
     });
 
     restart.setOnClickListener(new OnClickListener() {
       @Override
-      public void onClick(View v) {
+      public void onClick(View view) {
         // TODO button should delete the users transactions and all data stored, and restart the app like it was just installed
-
       }
     });
-
-
     return view;
   }
 
+  public class CurrentDateTime {
 
-
-//  public interface OnFragmentInteractionListenerMain {
-//    // TODO update argument type & name
-//    void onFragmentInteraction(Uri uri);
-//  }
+    @RequiresApi(api = VERSION_CODES.O)
+    public void main(String[] args) {
+      DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/YYYY HH:mm:ss");
+      LocalDateTime now = LocalDateTime.now();
+      Date date = new Date();
+      System.out.println(dtf.format(now));
+    }
+  }
 
 }

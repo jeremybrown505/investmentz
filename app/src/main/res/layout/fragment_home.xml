@@ -6,13 +6,13 @@
   android:layout_height="match_parent"
   android:layout_width="match_parent"
   tools:context=".controller.HomeFragment"
-  android:background="@color/goldenrodYellow"
+  android:background="@color/blue"
   >
 
 
   <TextView
     android:id="@+id/welcome_message"
-    android:background="@color/orange"
+    android:background="@color/green"
     android:text="Welcome"
     android:layout_margin="@dimen/half_margin"
     android:textStyle="italic|bold"
@@ -21,28 +21,27 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toTopOf="@id/bitcoin_price"
+    app:layout_constraintBottom_toTopOf="@id/text_view_date"
     />
 
   <TextView
     android:id="@+id/text_view_date"
-    android:background="@color/orange"
-    android:text="Date"
-    android:layout_margin="@dimen/half_margin"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_margin"
+    android:background="@color/green"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/welcome_message"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintBottom_toTopOf="@id/bitcoin_price"
-    />
+    tools:text="@tools:sample/date/hhmmss"/>
 
   <TextView
     android:id="@+id/bitcoin_price"
-    android:background="@color/orange"
+    android:background="@color/green"
     android:text="Crypto Price:"
     android:layout_margin="@dimen/half_margin"
-    android:textStyle=""
+    android:textStyle="italic|bold"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:layout_constraintStart_toStartOf="parent"
@@ -68,11 +67,13 @@
 
   <TextView
     android:id="@+id/available_balance"
-    android:background="@color/orange"
+    android:background="@color/green"
     android:text="Available Balance"
     android:layout_margin="@dimen/half_margin"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:paddingStart="@dimen/full_margin"
+    android:paddingEnd="@dimen/full_margin"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/crypto_graph"
     app:layout_constraintEnd_toEndOf="parent"
@@ -82,15 +83,18 @@
 
   <EditText
     android:id="@+id/transaction_amount"
-    android:background="@color/orange"
+    android:background="@color/blue"
     android:inputType="numberDecimal"
     android:autofillHints="true"
-    android:hint="amount to buy"
+    android:hint="Amount to buy"
+    android:textColorHint="@color/white"
     android:layout_margin="@dimen/half_margin"
+    android:paddingStart="@dimen/full_margin"
+    android:paddingEnd="@dimen/full_margin"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/crypto_graph"
+    app:layout_constraintTop_toBottomOf="@id/available_balance"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintBottom_toTopOf="@id/buy_button"
     />

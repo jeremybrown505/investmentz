@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.investmentz.viewmodel;
+package edu.cnm.deepdive.investmentz;
 
 import android.app.Application;
 import com.facebook.stetho.Stetho;

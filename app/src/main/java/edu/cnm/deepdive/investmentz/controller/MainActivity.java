@@ -13,10 +13,3 @@ public class MainActivity extends AppCompatActivity {
   }
 }
 
-//  @Override
-//  public void onFragmentInteraction(Uri uri) {
-//
-//  }
-//}
-
-

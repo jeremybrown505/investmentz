@@ -1,5 +1,11 @@
 apply plugin: 'com.android.application'
 
+def getProperty(String propertyFile, String propertyName) {
+    Properties properties = new Properties();
+    properties.load(new FileInputStream(propertyFile));
+    return String.format("\"%s\"", properties.getProperty(propertyName));
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -12,6 +18,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "BASE_URL",
+                getProperty("$projectDir/../../../services/investmentz.properties", "base_url")
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -63,6 +72,17 @@ android {
         // Navigation Dependencies.
         implementation 'androidx.navigation:navigation-fragment:2.3.0'
         implementation 'androidx.navigation:navigation-ui:2.3.0'
+
+        // Gson (JSON parser) dependency
+        implementation 'com.google.code.gson:gson:2.8.6'
+
+        // Retrofit (HTTP client) dependencies
+        implementation 'com.squareup.okhttp3:logging-interceptor:3.14.2'
+        def retrofit_version = "2.6.2"
+        implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+        implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+        implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+
 
     }
 

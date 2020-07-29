@@ -7,7 +7,6 @@ import androidx.room.PrimaryKey;
 import java.util.Date;
 
 @Entity(indices = @Index(value = "crypto_symbol", unique = true))
-
 public class Currency {
 
     @PrimaryKey(autoGenerate = true)

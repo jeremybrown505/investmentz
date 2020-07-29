@@ -7,7 +7,6 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
-import edu.cnm.deepdive.investmentz.model.entity.Currency;
 import edu.cnm.deepdive.investmentz.model.entity.Transaction;
 import io.reactivex.Single;
 import java.util.List;

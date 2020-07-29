@@ -17,22 +17,17 @@ import edu.cnm.deepdive.investmentz.R;
 
 public class HistoryFragment extends Fragment {
 
-  Button homeButton;
-  View view;
-
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
     View view = inflater.inflate(R.layout.fragment_history, container, false);
     Button button = view.findViewById(R.id.home_button);
 
-    button.setOnClickListener(new OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        Navigation.findNavController(view).navigate(R.id.history_to_home);
-      }
-    });
+    button.setOnClickListener(
+        view1 -> Navigation.findNavController(view1).navigate(R.id.history_to_home));
     return view;
   }
 
 }
+
+
